@@ -159,8 +159,23 @@
 <section class="modal">
     <div class="modal__container">
         
-        <h2 class="modal__title">¿Estas seguro de realizar la compra?</h2>
-        <p class="modal__paragraph">RECUERDA QUE AL REALIZAR LA COMPRA TIENES QUE TOMARLE CAPTURA AL CARRITO O DECIRLE AL VENDEDOR QUE PRODUCTOS SELECCIONASTE POR WHATSAPP PARA ESO DALE CLICK AL BOTON DE ABAJO PARA MANDAR EL PEDIDO AL VENDEDOR Y COORDINAR LA COMPRA CON EL</p>
+        <h2 class="modal__title">Para finalizar la compra contactese con alguno de los vendedores en línea de la lista</h2>
+        
+        <div id="nroVenta"class="modal__title"></div>
+
+        <div id="vendedores" class="modal__paragraph"></div>
+        <table class="modal__table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+
         <a href="#" class="modal__close">Entendido!</a>
     </div>
 </section>
@@ -207,5 +222,6 @@
 
 </section>
 
+<script src="js/vendedores.js" type="module"></script>
  <script src="js/script.js"></script>
  <script src="js/store.js"></script>
