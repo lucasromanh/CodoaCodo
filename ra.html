@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS</title>
-
-    <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
 
@@ -164,11 +160,19 @@
 
         <div class="box">
             <h3>newsletter</h3>
-            <p>subscribitre para mas informacion</p>
-            <form action="">
-                <input type="email" placeholder="enter your emal">
+            <p>subscribirte para más información</p>
+            <form action="" onsubmit="showPopup(event)">
+                <input type="email" placeholder="ingrese su correo electrónico">
                 <input type="submit" value="subscribe" class="btn">
             </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Tu correo electrónico ha sido registrado correctamente.</p>
+            </div>
         </div>
 
     </div>

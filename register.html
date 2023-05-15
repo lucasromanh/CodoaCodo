@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
 <body>
@@ -20,17 +22,17 @@
         <ul>
             <li><a href="index.html">INICIO</a></li>
             <li><a href="products.html">PRODUCTOS</a></li>
-            <li><a href="#">PAGINAS +</a>
+            <li><a href="#">paguinas +</a>
                 <ul>
                     <li><a href="about.html">NOSOTROS</a></li>
-                    <li><a href="blogs.html">BLOG</a></li>
+                    <li><a href="blogs.html">blogs</a></li>
                 </ul>
             </li>
             <li><a href="contact.html">CONTACTAR</a></li>
-            <li><a href="#">CUENTA +</a>
+            <li><a href="#">cuenta +</a>
                 <ul>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="register.html">REGISTER</a></li>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">registrar</a></li>
                 </ul>
             </li>
         </ul>
@@ -38,7 +40,7 @@
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-       <!-- <div id="search-btn" class="fas fa-search"></div>-->
+        <div id="search-btn" class="fas fa-search"></div>
         <a href="cart.html" class="fas fa-shopping-cart"></a>
     </div>
 
@@ -56,30 +58,31 @@
 
 <section class="register-form">
 
-    <form action="">
-        <h3>registrar ahora</h3>
+    <form id="register-form" action="/ruta/de/registro" method="POST">
+        <h3>Registrar ahora</h3>
         <div class="inputBox">
-            <span class="fas fa-user"></span>
-            <input type="text" name="" placeholder="ingrese su nombre" id="">
+          <span class="fas fa-user"></span>
+          <input type="text" name="username" placeholder="Ingrese su nombre" id="register-username">
         </div>
         <div class="inputBox">
-            <span class="fas fa-envelope"></span>
-            <input type="email" name="" placeholder="ingrese su email" id="">
+          <span class="fas fa-envelope"></span>
+          <input type="email" name="email" placeholder="Ingrese su email" id="register-email">
         </div>
         <div class="inputBox">
-            <span class="fas fa-lock"></span>
-            <input type="password" name="" placeholder="ingrese su password" id="">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="password" placeholder="Ingrese su password" id="register-password">
         </div>
         <div class="inputBox">
-            <span class="fas fa-lock"></span>
-            <input type="password" name="" placeholder="connfirme su password" id="">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="confirm_password" placeholder="Confirme su password" id="register-confirm-password">
         </div>
         <input type="submit" value="Registrar" class="btn">
-        <a href="login.html" class="btn">ya tengo una cuenta</a>
-    </form>
+        <a href="login.html" class="btn">Ya tengo una cuenta</a>
+      </form>
+      
 
 </section>
-
+<script src="js/script.js"></script>
 
 <section class="footer">
 
@@ -118,11 +121,19 @@
 
         <div class="box">
             <h3>newsletter</h3>
-            <p>subscribitre para mas informacion</p>
-            <form action="">
-                <input type="email" placeholder="Ingrese su mail">
+            <p>subscribirte para más información</p>
+            <form action="" onsubmit="showPopup(event)">
+                <input type="email" placeholder="ingrese su correo electrónico">
                 <input type="submit" value="subscribe" class="btn">
             </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Tu correo electrónico ha sido registrado correctamente.</p>
+            </div>
         </div>
 
     </div>

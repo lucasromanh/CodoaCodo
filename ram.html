@@ -151,11 +151,19 @@
 
         <div class="box">
             <h3>newsletter</h3>
-            <p>subscribitre para mas informacion</p>
-            <form action="">
-                <input type="email" placeholder="enter your emal">
+            <p>subscribirte para más información</p>
+            <form action="" onsubmit="showPopup(event)">
+                <input type="email" placeholder="ingrese su correo electrónico">
                 <input type="submit" value="subscribe" class="btn">
             </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Tu correo electrónico ha sido registrado correctamente.</p>
+            </div>
         </div>
 
     </div>

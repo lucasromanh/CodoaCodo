@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/store.js"></script>
 
 </head>
 <body>
@@ -85,7 +86,7 @@
 
         <div class="box">
             <h3>Links Rapidos</h3>
-            <a href="home.html"> <i class="fas fa-angle-right"></i> inicio</a>
+            <a href="index.html"> <i class="fas fa-angle-right"></i> inicio</a>
             <a href="products.html"> <i class="fas fa-angle-right"></i> productos</a>
             <a href="about.html"> <i class="fas fa-angle-right"></i> nosotros</a>
             <a href="blogs.html"> <i class="fas fa-angle-right"></i> blogs</a>
@@ -116,11 +117,19 @@
 
         <div class="box">
             <h3>newsletter</h3>
-            <p>subscribitre para mas informacion</p>
-            <form action="">
-                <input type="email" placeholder="enter your emal">
+            <p>subscribirte para más información</p>
+            <form action="" onsubmit="showPopup(event)">
+                <input type="email" placeholder="ingrese su correo electrónico">
                 <input type="submit" value="subscribe" class="btn">
             </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Tu correo electrónico ha sido registrado correctamente.</p>
+            </div>
         </div>
 
     </div>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/store.js"></script>
 
 </head>
 <body>
@@ -39,7 +40,7 @@
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-       <!-- <div id="search-btn" class="fas fa-search"></div>-->
+        <div id="search-btn" class="fas fa-search"></div>
         <a href="cart.html" class="fas fa-shopping-cart"></a>
     </div>
 
@@ -67,14 +68,43 @@
                 <img src="images/blog-1.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Los ojos tambien deben descanzar</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">Leer mas</a>
+                <h3>Los ojos también deben descansar</h3>
+                <p>En nuestra vida diaria, pasamos horas frente a pantallas y dispositivos electrónicos, pero rara vez descansamos nuestros ojos. Aquí te mostramos por qué es importante ...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-1')">Leer más</a>
                 <div class="icons">
-                    <a href="#"> <i class="fas fa-clock"></i> 21 abril, 2023 </a>
-                    <a href="#"> <i class="fas fa-user"></i> by Lucas </a>
+                    <a href="#"><i class="fas fa-clock"></i> 21 abril, 2023</a>
+                    <a href="#"><i class="fas fa-user"></i> by Lucas</a>
                 </div>
             </div>
+        </div>
+    
+        <div id="blogPopup-1" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-1')">&times;</span>
+                
+                  <h2>Descanso para tus ojos: Importancia y consejos</h2>
+                  
+                  <p>En nuestra vida diaria, pasamos horas frente a pantallas y dispositivos electrónicos, pero rara vez descansamos nuestros ojos. Aquí te mostramos por qué es importante y cómo hacerlo correctamente.</p>
+                  
+                  <h4>Tensión ocular y sus efectos</h4>
+                  <p>Mirar pantallas durante mucho tiempo puede causar fatiga ocular, sequedad, picazón y visión borrosa. Ignorar estos síntomas puede tener efectos negativos a largo plazo en nuestra salud visual.</p>
+                  
+                  <h4>Importancia del descanso visual</h4>
+                  <p>Descansar los ojos es esencial para mantener una buena salud ocular. Tomar pequeños descansos periódicos permite que se relajen y evita problemas como el síndrome del ojo seco.</p>
+                  
+                  <h4>Uso de lentes para el descanso visual</h4>
+                  <p>Los lentes especiales para computadora o de filtro de luz azul reducen la fatiga ocular al filtrar la luz azul dañina de los dispositivos electrónicos.</p>
+                  
+                  <h4>Consejos para el descanso visual</h4>
+                  <ol>
+                    <li>Realiza pausas regulares: Cada 20-30 minutos, aparta la vista de la pantalla y enfoca en un objeto distante durante 20 segundos.</li>
+                    <li>Parpadea con frecuencia: Mantén tus ojos lubricados y previene la sequedad ocular.</li>
+                    <li>Ajusta el brillo y contraste de las pantallas: Configura niveles adecuados para reducir la fatiga ocular.</li>
+                    <li>Mantén una distancia adecuada: Evita acercarte demasiado a las pantallas.</li>
+                  </ol>
+                  
+                  <p>Recuerda que el descanso visual es esencial para cuidar tus ojos en un mundo digitalizado. Sigue estos consejos y protege tu salud visual. ¡Tus ojos te lo agradecerán!</p>
+                </div>     
         </div>
     
         <div class="box">
@@ -83,12 +113,30 @@
             </div>
             <div class="content">
                 <h3>Mejora tu concentracion</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">Leer mas</a>
+                <p>En busca de mejorar tu concentración y maximizar tu rendimiento, considera la utilidad de los lentes como una herramienta efectiva. Los lentes diseñados específicamente para actividades como el trabajo en pantalla y el estudio pueden brindarte beneficios significativos. Aquí te presentamos cómo los lentes pueden contribuir a mejorar tu...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-2')">Leer más</a>
                 <div class="icons">
-                    <a href="#"> <i class="fas fa-clock"></i> 22 Abril, 2023 </a>
-                    <a href="#"> <i class="fas fa-user"></i> by Jorge </a>
+                    <a href="#"><i class="fas fa-clock"></i> 22 Abril, 2023</a>
+                    <a href="#"><i class="fas fa-user"></i> by Jorge</a>
                 </div>
+            </div>
+        </div>
+    
+        <div id="blogPopup-2" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-2')">&times;</span>
+                <h2>Mejora Tu Concentración con el Uso de Lentes</h2>
+                <p>En busca de mejorar tu concentración y maximizar tu rendimiento, considera la utilidad de los lentes como una herramienta efectiva. Los lentes diseñados específicamente para actividades como el trabajo en pantalla y el estudio pueden brindarte beneficios significativos. Aquí te presentamos cómo los lentes pueden contribuir a mejorar tu concentración.</p>
+                <h4>Reducción de la fatiga visual</h4>
+                <p>Los lentes para pantallas o filtros de luz azul ayudan a reducir la fatiga visual causada por la exposición prolongada a la luz azul emitida por dispositivos electrónicos. Al reducir la fatiga ocular, estos lentes permiten que tus ojos se mantengan frescos y cómodos durante períodos prolongados de uso de pantallas, lo que mejora tu concentración.</p>
+                <h4>Mayor claridad visual</h4>
+                <p>Los lentes con receta personalizada corregirán cualquier problema de visión que puedas tener, como la miopía o la hipermetropía. Al obtener una visión nítida y clara, podrás leer, trabajar en pantalla o estudiar sin esforzar los ojos, lo que facilita la concentración en las tareas que realizas.</p>
+                <h4>Disminución de la distracción visual</h4>
+                <p>Si utilizas lentes para actividades específicas, como lentes de lectura o lentes de visión cercana, puedes minimizar la distracción visual. Al enfocar correctamente los objetos cercanos, los lentes te permiten concentrarte en tu trabajo o estudio sin esforzarte por enfocar o acomodar constantemente la vista.</p>
+                <h4>Protección contra la fatiga física</h4>
+                <p>La fatiga física también puede afectar tu capacidad de concentración. Al elegir lentes livianos y cómodos, evitas la incomodidad o el cansancio innecesario en la zona de la nariz o las orejas. Al sentirte físicamente cómodo con tus lentes, puedes concentrarte mejor en tus tareas sin distracciones.</p>
+                <p>En resumen, los lentes diseñados para actividades específicas pueden desempeñar un papel importante en la mejora de tu concentración. Al reducir la fatiga visual, proporcionar una visión clara y minimizar las distracciones visuales, los lentes te brindan un entorno visual óptimo para mantener tu atención en lo que estás haciendo.</p>
+                <p>Considera consultar a un especialista en salud visual para determinar qué tipo de lentes son adecuados para ti y experimenta cómo pueden potenciar tu concentración y rendimiento.</p>
             </div>
         </div>
     
@@ -98,12 +146,24 @@
             </div>
             <div class="content">
                 <h3>Ver Mejor!!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">Leer mas</a>
+                <p>Los lentes son una solución efectiva para mejorar tu visión y disfrutar de una vida más clara y nítida. Ya sea que necesites lentes recetados para corregir problemas de visión o lentes de protección para actividades específicas, su uso puede marcar una gran diferencia. Al mejorar tu capacidad de ver, obtendrás una ...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-3')">Leer más</a>
                 <div class="icons">
                     <a href="#"> <i class="fas fa-clock"></i> 23 Abril, 2023 </a>
                     <a href="#"> <i class="fas fa-user"></i> by Angie </a>
                 </div>
+            </div>
+        </div>
+    
+        <div id="blogPopup-3" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-3')">&times;</span>
+                <h2>Ver Mejor con Lentes: Mejora tu Visión en Todos los Aspectos</h2>
+                <p>Los lentes son una solución efectiva para mejorar tu visión y disfrutar de una vida más clara y nítida. Ya sea que necesites lentes recetados para corregir problemas de visión o lentes de protección para actividades específicas, su uso puede marcar una gran diferencia. Al mejorar tu capacidad de ver, obtendrás una serie de beneficios en todos los aspectos de tu vida.</p>
+                <p>Con lentes recetados, podrás leer, trabajar en pantalla y realizar actividades diarias con una visión nítida y sin esfuerzo. Esto te permitirá apreciar detalles finos, disfrutar de una lectura cómoda y realizar tareas con mayor precisión. Además, corregir problemas de visión contribuye a reducir la fatiga visual y la tensión ocular, mejorando tu comodidad y bienestar.</p>
+                <p>Si practicas deportes o actividades al aire libre, los lentes de protección te brindan una visión clara y segura. Protegen tus ojos de los dañinos rayos ultravioleta, el polvo y otros elementos, lo que te permite disfrutar plenamente de tus actividades sin preocuparte por posibles lesiones o molestias visuales.</p>
+                <p>Además, los lentes con tecnologías especiales, como los lentes antirreflejos y los filtros de luz azul, ofrecen beneficios adicionales. Los lentes antirreflejos reducen los reflejos molestos y mejoran el contraste, brindándote una visión más clara y cómoda en diversas condiciones de iluminación. Los filtros de luz azul ayudan a proteger tus ojos de la luz emitida por dispositivos electrónicos, aliviando la fatiga ocular y mejorando la calidad del sueño.</p>
+                <p>En definitiva, utilizar lentes adecuados te permite ver mejor y disfrutar de una vida más plena. No importa si son lentes recetados, lentes de protección o con tecnologías especiales, invertir en tu visión es una elección inteligente. No dudes en consultar a un profesional de la salud visual para obtener los lentes adecuados para ti y experimentar los beneficios de una visión mejorada en todas las áreas de tu vida.</p>
             </div>
         </div>
     
@@ -113,12 +173,25 @@
             </div>
             <div class="content">
                 <h3>La felicidad se ve!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">Leer mas</a>
+                <p>Los lentes no solo mejoran nuestra visión física, también pueden contribuir a nuestra felicidad y bienestar emocional. Cuando vemos claramente el mundo que nos rodea, experimentamos una sensación de alegría y satisfacción. Aquí te mostramos cómo los lentes pueden influir en nuestra percepción...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-4')">Leer más</a>
                 <div class="icons">
                     <a href="#"> <i class="fas fa-clock"></i> 24 Abril, 2023 </a>
                     <a href="#"> <i class="fas fa-user"></i> by Mauricio </a>
                 </div>
+            </div>
+        </div>
+    
+        <div id="blogPopup-4" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-4')">&times;</span>
+                <h2>La Felicidad Se Ve a Través de los Lentes</h2>
+                <p>Los lentes no solo mejoran nuestra visión física, también pueden contribuir a nuestra felicidad y bienestar emocional. Cuando vemos claramente el mundo que nos rodea, experimentamos una sensación de alegría y satisfacción. Aquí te mostramos cómo los lentes pueden influir en nuestra percepción de la felicidad.</p>
+                <p>Con lentes recetados adecuados, podemos apreciar los detalles y colores vívidos del entorno, lo que nos permite disfrutar plenamente de las maravillas visuales que nos rodean. Desde admirar la belleza de la naturaleza hasta apreciar las expresiones faciales de nuestros seres queridos, una visión clara nos conecta con momentos de felicidad y nos permite disfrutarlos al máximo.</p>
+                <p>Además, los lentes de sol no solo protegen nuestros ojos de los rayos dañinos del sol, sino que también influyen en nuestro estado de ánimo. Al reducir el deslumbramiento y proporcionar una visión más cómoda al aire libre, los lentes de sol pueden ayudarnos a sentirnos relajados y alegres mientras disfrutamos del sol y el buen tiempo.</p>
+                <p>Los lentes también pueden mejorar nuestra autoestima y confianza. Si usamos lentes de moda o que se adapten a nuestro estilo personal, nos sentiremos más seguros de nosotros mismos y esto puede reflejarse en nuestra actitud y comportamiento. Sentirnos bien con nuestra apariencia nos brinda una mayor satisfacción y nos permite mostrar nuestra verdadera personalidad al mundo.</p>
+                <p>Por último, es importante destacar cómo los lentes nos ayudan a mantener una buena salud visual a largo plazo. Al cuidar y proteger nuestros ojos, nos brindan tranquilidad y nos permiten disfrutar de una visión saludable durante toda nuestra vida. Esta sensación de seguridad y bienestar se traduce en una mayor felicidad general y en la capacidad de enfrentar los desafíos diarios con una actitud positiva.</p>
+                <p>En resumen, los lentes no solo mejoran nuestra visión física, sino que también tienen un impacto en nuestra felicidad y bienestar emocional. Al brindarnos una visión clara, protegernos de los elementos y permitirnos expresar nuestra personalidad, los lentes juegan un papel importante en cómo experimentamos y percibimos la felicidad en nuestras vidas.</p>
             </div>
         </div>
     
@@ -128,12 +201,25 @@
             </div>
             <div class="content">
                 <h3>Negocios y vista</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">Leer mas</a>
+                <p>Cuando se trata de los negocios, una visión clara es esencial para el éxito. Los lentes desempeñan un papel fundamental al garantizar una visión nítida y precisa, lo que puede marcar la diferencia en el mundo empresarial. Aquí te mostramos la importancia de una buena visión ...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-5')">Leer más</a>
                 <div class="icons">
                     <a href="#"> <i class="fas fa-clock"></i> 21 Abril, 2023 </a>
                     <a href="#"> <i class="fas fa-user"></i> by Lucas Roman </a>
                 </div>
+            </div>
+        </div>
+    
+        <div id="blogPopup-5" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-5')">&times;</span>
+                <h2>Negocios y Vista: La Importancia de una Visión Clara</h2>
+                <p>Cuando se trata de los negocios, una visión clara es esencial para el éxito. Los lentes desempeñan un papel fundamental al garantizar una visión nítida y precisa, lo que puede marcar la diferencia en el mundo empresarial. Aquí te mostramos la importancia de una buena visión en el entorno empresarial.</p>
+                <p>En primer lugar, una visión clara nos permite leer y analizar documentos importantes, contratos y datos financieros con precisión. La capacidad de ver los detalles finos y comprender la información de manera adecuada es crucial para tomar decisiones informadas y estratégicas en el mundo empresarial.</p>
+                <p>Además, los lentes adecuados pueden reducir la fatiga visual y prevenir el cansancio ocular, lo que nos permite mantenernos enfocados y productivos durante largas horas de trabajo. Una visión cómoda y sin esfuerzo nos permite realizar tareas con mayor eficiencia y concentración, mejorando nuestra productividad y rendimiento en el entorno empresarial.</p>
+                <p>Los lentes también desempeñan un papel en la presentación personal y profesional. El uso de lentes de moda y que reflejen nuestra imagen y estilo personal puede transmitir una imagen de confianza y profesionalismo en el entorno de negocios. Una buena apariencia visual nos brinda una ventaja competitiva y nos ayuda a proyectar una imagen sólida y confiable.</p>
+                <p>Por último, los lentes de protección, como los lentes con filtro de luz azul, son especialmente importantes en el mundo digital de hoy. Pasamos largas horas frente a pantallas de computadoras y dispositivos móviles, lo que puede causar fatiga visual y tensión ocular. El uso de lentes de protección adecuados nos permite mantener una visión clara y saludable, reduciendo el riesgo de problemas visuales relacionados con el trabajo en pantalla.</p>
+                <p>En conclusión, tener una visión clara es fundamental en el entorno empresarial. Los lentes nos brindan la capacidad de leer, analizar y tomar decisiones con precisión, así como mejorar nuestra productividad y proyectar una imagen profesional. Además, proteger nuestros ojos con lentes adecuados es esencial para mantener una visión saludable en la era digital. Invertir en una buena visión es una inversión inteligente para el éxito en los negocios.</p>
             </div>
         </div>
     
@@ -142,17 +228,30 @@
                 <img src="images/blog-6.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Ver+ sufrir -</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, inventore?</p>
-                <a href="#" class="btn">read more</a>
+                <h3>Ver+ (más), Sufrir - (menos)</h3>
+                <p>Cuando hablamos de una visión mejorada, no solo nos referimos a una mejor capacidad visual, sino también a la forma en que experimentamos la vida. Una visión clara y saludable puede marcar la diferencia en nuestro bienestar físico, emocional y mental. Aquí te mostramos cómo una visión mejorada nos permite ver más y...</p>
+                <a href="#" class="btn" onclick="openPopup('blogPopup-6')">Leer más</a>
                 <div class="icons">
                     <a href="#"> <i class="fas fa-clock"></i> 21 Abril, 20213</a>
                     <a href="#"> <i class="fas fa-user"></i> by Lucas Roman </a>
                 </div>
             </div>
         </div>
-
+    
+        <div id="blogPopup-6" class="popup">
+            <div class="popup-content blog-content">
+                <span class="close" onclick="closePopupt('blogPopup-6')">&times;</span>
+                <h2>Ver+ (más), Sufrir - (menos): El Poder de una Visión Mejorada</h2>
+                <p>Cuando hablamos de una visión mejorada, no solo nos referimos a una mejor capacidad visual, sino también a la forma en que experimentamos la vida. Una visión clara y saludable puede marcar la diferencia en nuestro bienestar físico, emocional y mental. Aquí te mostramos cómo una visión mejorada nos permite ver más y sufrir menos.</p>
+                <p>En primer lugar, una visión mejorada nos brinda la oportunidad de ver más detalles y apreciar plenamente el mundo que nos rodea. Desde los colores vibrantes de la naturaleza hasta los rostros y expresiones de las personas que amamos, una visión clara nos permite disfrutar de los pequeños detalles que a menudo pasan desapercibidos. Esto nos ayuda a vivir en el presente y encontrar alegría en las cosas simples de la vida.</p>
+                <p>Además, una visión mejorada contribuye a nuestra seguridad y bienestar. Nos permite realizar tareas diarias con mayor facilidad y precisión, reduciendo el estrés y la frustración. Al tener una visión clara de nuestro entorno, podemos evitar obstáculos y situaciones peligrosas, lo que nos brinda confianza y tranquilidad en nuestras actividades diarias.</p>
+                <p>Una visión mejorada también impacta nuestra salud mental y emocional. Al ver el mundo de manera más clara, podemos apreciar las oportunidades y posibilidades que se presentan ante nosotros. Esto nos ayuda a mantener una actitud positiva y optimista, fomentando nuestra resiliencia y capacidad para superar los desafíos.</p>
+                <p>Además, al tener una visión mejorada, reducimos el sufrimiento asociado con problemas visuales. La fatiga ocular, los dolores de cabeza y la tensión visual pueden afectar nuestra calidad de vida. Al cuidar y corregir problemas visuales con lentes adecuados, podemos aliviar el malestar físico y emocional asociado, mejorando nuestro bienestar general.</p>
+                <p>En resumen, una visión mejorada nos permite ver más belleza, experimentar menos sufrimiento y vivir una vida más plena. Cuidar nuestra visión y utilizar los lentes adecuados es una forma de invertir en nuestro bienestar y disfrutar de una perspectiva clara y positiva de la vida. No subestimes el poder de una visión mejorada y la influencia que puede tener en todos los aspectos de tu vida.</p>
+            </div>
+        </div>
     </div>
+    
 
 </section>
 
@@ -163,7 +262,7 @@
 
         <div class="box">
             <h3>Links Rapidos</h3>
-            <a href="home.html"> <i class="fas fa-angle-right"></i> inicio</a>
+            <a href="index.html"> <i class="fas fa-angle-right"></i> inicio</a>
             <a href="products.html"> <i class="fas fa-angle-right"></i> productos</a>
             <a href="about.html"> <i class="fas fa-angle-right"></i> nosotros</a>
             <a href="blogs.html"> <i class="fas fa-angle-right"></i> blogs</a>
@@ -194,11 +293,19 @@
 
         <div class="box">
             <h3>newsletter</h3>
-            <p>subscribitre para mas informacion</p>
-            <form action="">
-                <input type="email" placeholder="enter your emal">
+            <p>subscribirte para más información</p>
+            <form action="" onsubmit="showPopup(event)">
+                <input type="email" placeholder="ingrese su correo electrónico">
                 <input type="submit" value="subscribe" class="btn">
             </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Tu correo electrónico ha sido registrado correctamente.</p>
+            </div>
         </div>
 
     </div>

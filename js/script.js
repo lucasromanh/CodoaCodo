@@ -32,21 +32,82 @@ function prev(){
     slides[index].classList.add('active');
 }
 
-const form = document.getElementById('login');
-const username = document.getElementById('username');
-const password = document.getElementById('password');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  if (username.value.trim() === '') {
-    alert('Por favor ingrese su nombre de usuario');
+// Registro de usuario
+var registerForm = document.getElementById('register-form');
+
+registerForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById('register-username').value;
+  var email = document.getElementById('register-email').value;
+  var password = document.getElementById('register-password').value;
+  var confirmPassword = document.getElementById('register-confirm-password').value;
+
+  if (username.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+    alert('Por favor, complete todos los campos');
     return;
   }
-  
-  if (password.value.trim() === '') {
-    alert('Ingrese su password');
+
+  if (password !== confirmPassword) {
+    alert('Las contraseñas no coinciden');
     return;
   }
-  form.submit();
+
+  var userData = {
+    username: username,
+    email: email,
+    password: password
+  };
+  localStorage.setItem('userData', JSON.stringify(userData));
+
+  alert('¡Registro exitoso!');
+
+  setTimeout(function() {
+    window.location.replace("../index.html");
+  }, 1000);
 });
+
+
+var loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var storedData = localStorage.getItem('userData');
+
+  if (storedData) {
+    var userData = JSON.parse(storedData);
+
+    if (username === userData.username && password === userData.password) {
+      alert('Inicio de sesión exitoso');
+    } else {
+      alert('Inicio de sesión fallido');
+    }
+  } else {
+    alert('No se encontraron datos de usuario');
+  }
+});
+
+function showPopup(event) {
+  event.preventDefault(); 
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+}
+
+function closePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
+
+function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "block";
+}
+
+function closePopupt(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "none";
+}
