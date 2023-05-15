@@ -20,21 +20,17 @@ window.onscroll = () =>{
 let slides = document.querySelectorAll('.home .slide');
 let index = 0;
 
-function next() {
+function next(){
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length;
     slides[index].classList.add('active');
 }
 
-function prev() {
+function prev(){
     slides[index].classList.remove('active');
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
-
-document.getElementById('next-slide').addEventListener('click', next);
-document.getElementById('prev-slide').addEventListener('click', prev);
-
 
 
 function showPopup(event) {
