@@ -1098,3 +1098,26 @@ section {
 .blogs li {
   margin-bottom: 5px;
 }
+
+#cuentas {
+  display: none;
+}
+
+#cuentas.show {
+  display: block;
+}
+
+#cuentas a {
+  color: #333;
+  text-decoration: none;
+}
+
+#cuentas a:hover {
+  text-decoration: underline;
+}
+
+#username {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}

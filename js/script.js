@@ -64,7 +64,7 @@ registerForm.addEventListener('submit', function(event) {
   alert('¡Registro exitoso!');
 
   setTimeout(function() {
-    window.location.replace("../index.html");
+    window.location.replace("../indexLog.html");
   }, 1000);
 });
 
@@ -81,7 +81,7 @@ loginForm.addEventListener('submit', function(event) {
   if (storedData) {
     var userData = JSON.parse(storedData);
 
-    if (username === userData.username && password === userData.password) {
+    if (username === userData['username'] && password === userData['password']) {
       alert('Inicio de sesión exitoso');
     } else {
       alert('Inicio de sesión fallido');
@@ -111,3 +111,34 @@ function closePopupt(popupId) {
   var popup = document.getElementById(popupId);
   popup.style.display = "none";
 }
+document.addEventListener('DOMContentLoaded', function() {
+  var storedData = localStorage.getItem('userData');
+
+  if (storedData) {
+    var userData = JSON.parse(storedData);
+    var usernameElement = document.getElementById('username');
+    
+    if (usernameElement) {
+      usernameElement.textContent = userData.username;
+    }
+    
+    var cuentasElement = document.querySelector('li > a[href="#"] + ul');
+    if (cuentasElement) {
+      cuentasElement.style.display = 'none';
+
+      var logoutElement = document.createElement('a');
+      logoutElement.href = '#';
+      logoutElement.textContent = 'Logout';
+      logoutElement.addEventListener('click', function() {
+        localStorage.removeItem('userData');
+        window.location.replace('login.html');
+      });
+
+      cuentasElement.parentNode.insertBefore(usernameElement, cuentasElement.nextSibling);
+      cuentasElement.parentNode.insertBefore(logoutElement, cuentasElement.nextSibling);
+    }
+  } else {
+    // Si no hay datos de usuario registrado, redireccionar a la página de login
+    window.location.replace('login.html');
+  }
+});

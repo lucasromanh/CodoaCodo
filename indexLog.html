@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS</title>
+    <title>LENTES LDR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/store.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -15,7 +17,7 @@
 
 <header class="header">
 
-    <a href="index.html" class="logo"> Tienda de Lentes</a>
+    <a href="indexLog.html" class="logo"> Tienda de Lentes </a>
 
     <nav class="navbar">
         <ul>
@@ -28,11 +30,9 @@
                 </ul>
             </li>
             <li><a href="contact.html">CONTACTAR</a></li>
-            <li><a href="#">CUENTA +</a> <span id="username"></span>
-                <ul>
-                    <li><a href="login.html">login</a></li>
-                    <li><a href="register.html">register</a></li>
-                </ul>
+            <li>
+                <a href="#">
+                    <span id="username"></span>
             </li>
         </ul>
     </nav>
@@ -44,13 +44,100 @@
     </div>
 
     <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here..." id="search-box">
+        <input type="search" name="" placeholder="Buscar..." id="search-box">
         <label for="search-box" class="fas fa-search"></label>
     </form>
+
 </header>
 
-<section class="heading" style="background: black;">
-    <h1 style="font-size: 17px;" class="animacion">PROXIMAMENTE</h1>
+
+<section class="home">
+
+    <div class="slide active" style="background: url(images/home-bg-1.png) no-repeat;">
+        <div class="content">
+            <span>Protege tus ojos</span>
+            <h3>50% de descuento</h3>
+            <a href="des.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="slide" style="background: url(images/home-bg-2.png) no-repeat;">
+        <div class="content">
+            <span>Protege tus ojos</span>
+            <h3>50% de descuento</h3>
+            <a href="des.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="slide" style="background: url(images/home-bg-3.png) no-repeat;">
+        <div class="content">
+            <span>Protege tus ojos</span>
+            <h3>50% de descuento</h3>
+            <a href="des.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
+    <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
+
+</section>
+
+<section class="banner">
+
+    <div class="box">
+        <img src="images/banner-1.jpg" alt="">
+        <div class="content">
+            <span>Lentes de medida</span>
+            <h3>Larga distancia</h3>
+            <a href="lar.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/banner-2.jpg" alt="">
+        <div class="content">
+            <span>Lentes sin medida</span>
+            <h3>De descanso</h3>
+            <a href="des.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/banner-3.jpg" alt="">
+        <div class="content">
+            <span>Lentes de medida</span>
+            <h3>Corta distancia</h3>
+            <a href="lec.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="box"> 
+        <img src="images/banner-4.jpg" alt="">
+        <div class="content">
+            <span style="color: white;">Lentes de sol</span>
+            <h3 style="color: white;">Varones</h3>
+            <a href="varones.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/banner-5.jpg" alt="">
+        <div class="content">
+            <span style="color: white;">Lentes de sol</span>
+            <h3 style="color: white;">Damas</h3>
+            <a href="damas.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/banner-6.jpg" alt="">
+        <div class="content">
+            <span style="color: white;">Lentes de sol</span>
+            <h3 style="color: white;">Niños</h3>
+            <a href="niños.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+
 </section>
 
 
@@ -109,6 +196,17 @@
 
 </section>
 
- <script src="js/script.js"></script>
- <script src="js/store.js"></script>
+<script>
+    var storedData = localStorage.getItem('userData');
+  
+    if (storedData) {
+      var userData = JSON.parse(storedData);
+      var usernameElement = document.getElementById('username');
+      if (usernameElement) {
+        usernameElement.textContent = userData.username;
+      }
+    }
+  </script>
 
+</body>
+</html>
