@@ -1099,6 +1099,32 @@ section {
   margin-bottom: 5px;
 }
 
+
+@media (min-width: 768px) {
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+    .box {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    }
+  }
+
+
+@media (max-width: 767px) {
+    .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+    .box {
+    margin-bottom: 20px;
+    }
+  }
+
 #cuentas {
   display: none;
 }
