@@ -1031,7 +1031,7 @@ section {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 
 .close {
@@ -1054,7 +1054,7 @@ section {
 
 .popup-content.blog-content {
   width: 90%; 
-  height: 90%; 
+  /* height: 90%;  */
   max-width: 1200px; 
   max-height: 800px; 
 }
