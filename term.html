@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS</title>
+    <title>LENTES LDR</title>
     <link rel="icon" href="images/vasos.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cart.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/poliytermi.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/vendedores.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -17,7 +19,7 @@
 
 <header class="header">
 
-    <a href="index.html" class="logo"> Tienda de Lentes</a>
+    <a href="index.html" class="logo"> Tienda de Lentes </a>
 
     <nav class="navbar">
         <ul>
@@ -30,7 +32,7 @@
                 </ul>
             </li>
             <li><a href="contact.html">CONTACTAR</a></li>
-            <li><a href="#">CUENTA +</a> <span id="username"></span>
+            <li><a href="#">CUENTA +</a>
                 <ul>
                     <li><a href="login.html">login</a></li>
                     <li><a href="register.html">register</a></li>
@@ -46,86 +48,44 @@
     </div>
 
     <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here..." id="search-box">
+        <input type="search" name="" placeholder="Buscar..." id="search-box">
         <label for="search-box" class="fas fa-search"></label>
     </form>
+
 </header>
 
-<section class="heading" style="background: black;">
-    <h1 class="animacion">Modelo Prada</h1>
-</section>
 
+<section class="content">
+    <div class="box privacy-texto">
+        <h1>Términos de Uso</h1>
+  
+            <h2>1. Aceptación de los términos</h2>
+            <p>Al acceder y utilizar este sitio web, usted acepta estar sujeto a los siguientes términos y condiciones. Si no está de acuerdo con estos términos, por favor no utilice este sitio web.</p>
+            
+            <h2>2. Uso del sitio web</h2>
+            <p>El contenido de este sitio web es únicamente para fines informativos y de compra de lentes. Usted acepta utilizar este sitio web de manera adecuada y legal, sin incurrir en conductas que violen los derechos de terceros o que puedan causar daño o interferencia en el funcionamiento del sitio.</p>
+            
+            <h2>3. Propiedad intelectual</h2>
+            <p>Todos los derechos de propiedad intelectual, incluyendo derechos de autor, marcas registradas y otros derechos de propiedad, en el contenido y diseño de este sitio web son propiedad de la tienda de lentes o de sus respectivos titulares. Usted no tiene autorización para reproducir, distribuir, modificar o utilizar dicho contenido sin el permiso previo por escrito del propietario.</p>
+            
+            <h2>4. Privacidad</h2>
+            <p>El uso de los datos personales proporcionados durante la compra de lentes se rige por nuestra Política de Privacidad, que puede ser consultada en el sitio web.</p>
+            
+            <h2>5. Exclusión de responsabilidad</h2>
+            <p>La tienda de lentes no se hace responsable por cualquier daño, pérdida o inconveniente causado por el uso de este sitio web o de los productos adquiridos a través del mismo. No garantizamos la disponibilidad, precisión, actualidad o idoneidad de la información contenida en el sitio.</p>
+            
+            <h2>6. Enlaces a otros sitios web</h2>
+            <p>Este sitio web puede contener enlaces a otros sitios de terceros. Estos enlaces se proporcionan únicamente para su conveniencia y no implican que respaldemos o tengamos control sobre el contenido de dichos sitios. No nos hacemos responsables de cualquier daño o pérdida derivada de su uso de los sitios enlazados.</p>
+            
+            <h2>7. Modificaciones</h2>
+            <p>Nos reservamos el derecho de modificar estos términos de uso en cualquier momento. Cualquier modificación será efectiva inmediatamente después de su publicación en este sitio web. Se recomienda revisar periódicamente los términos de uso actualizados.</p>
+            
+            <h2>8. Ley aplicable y jurisdicción</h2>
+            <p>Estos términos de uso se rigen por las leyes vigentes en [país]. Cualquier disputa relacionada con este sitio web se someterá a la jurisdicción exclusiva de los tribunales de [ciudad, país].</p>
 
-<section class="container content-section">
-    <div class="shop-items">
-        <div class="shop-item">
-            <span class="shop-item-title">Prada <br> Color negro #1</span>
-            <img style="width: 345px;" class="shop-item-image" src="images/PRADA/pr-1.png">
-            <div class="shop-item-details">
-                <span class="shop-item-price">S/55.00</span>
-                <button class="btn btn-primary shop-item-button" type="button">AÑADIR AL CARRITO</button>
-            </div>
-        </div>
-        <div class="shop-item">
-            <span class="shop-item-title">Aviador <br> Color negro #2</span>
-            <img style="width: 345px;" class="shop-item-image" src="images/PRADA/pr-2.png">
-            <div class="shop-item-details">
-                <span class="shop-item-price">S/55.00</span>
-                <button class="btn btn-primary shop-item-button" type="button">AÑADIR AL CARRITO</button>
-            </div>
-        </div>
-        <div class="shop-item">
-            <span class="shop-item-title">Aviador <br> Colo marron</span>
-            <img style="width: 345px;" class="shop-item-image" src="images/PRADA/pr-3.png">
-            <div class="shop-item-details">
-                <span class="shop-item-price">S/55.00</span>
-                <button class="btn btn-primary shop-item-button" type="button">AÑADIR AL CARRITO</button>
-            </div>
-        </div>
-             
-</section>
-<section id="cart-section" class="container content-section">
-    <h2 class="section-header">Carrito</h2>
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">Producto</span>
-        <span class="cart-price cart-header cart-column">Precio</span>
-        <span class="cart-quantity cart-header cart-column">Cantidad</span>
-    </div>
-    <div class="cart-items">
-    </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">S/0</span>
-    </div>
-    <button class="btn btn-primary hero__cta">COMPRAR</button>
-    <a href="https://api.whatsapp.com/send/?phone=3874404472&text&app_absent=0" class="btn btn-purchase btn-primary" type="button">CONTACTAR CON EL VENDEDOR</a>
-
-</section>
-
-<section class="modal">
-    <div class="modal__container">
         
-        <h2 class="modal__title">Para finalizar la compra contactese con alguno de los vendedores en línea de la lista</h2>
-        
-        <div id="nroVenta"class="modal__title"></div>
-
-        <div id="vendedores" class="modal__paragraph"></div>
-        <table class="modal__table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>EMAIL</th>
-                </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
-        </table>
-
-        <a href="#" class="modal__close">Entendido!</a>
-    </div>
-    
 </section>
+
 
 
 <section class="footer">
@@ -149,7 +109,6 @@
             <a href="login.html"> <i class="fas fa-angle-right"></i> mi cuenta </a>
             <a href="cart.html"> <i class="fas fa-angle-right"></i> mis ordenes </a>
             <a href="cart.html"> <i class="fas fa-angle-right"></i> mi lista </a>
-            <a href="term.html"> <i class="fas fa-angle-right"></i> terminos de uso </a>
             <a href="pol.html"> <i class="fas fa-angle-right"></i> politica de privacidad </a>
         </div>
 
@@ -187,7 +146,6 @@
 
 </section>
 
- 
-<script src="js/script.js" defer></script>
-<script src="js/vendedores.js" type="module"></script>
-<script src="js/store.js"></script>
+
+</body>
+</html>

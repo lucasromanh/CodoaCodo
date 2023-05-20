@@ -1,9 +1,9 @@
 let searchForm = document.querySelector('.header .search-form');
 
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-}
+// document.querySelector('#search-btn').onclick = () =>{
+//     searchForm.classList.toggle('active');
+//     navbar.classList.remove('active');
+// }
 
 let navbar = document.querySelector('.header .navbar');
 
@@ -66,3 +66,25 @@ function closePopupt(popupId) {
 //     localStorage.removeItem('login_success')
 //     window.location.href = 'login.html'
 // })
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var name = document.getElementById("name-input").value;
+  var phone = document.getElementById("phone-input").value;
+  var email = document.getElementById("email-input").value;
+  var message = document.getElementById("message-input").value;
+
+  localStorage.setItem("name", name);
+  localStorage.setItem("phone", phone);
+  localStorage.setItem("email", email);
+  localStorage.setItem("message", message);
+
+  alert("Su mensaje ha sido enviado con éxito. Pronto nos pondremos en contacto con usted.");
+
+  document.getElementById("name-input").value = "";
+  document.getElementById("phone-input").value = "";
+  document.getElementById("email-input").value = "";
+  document.getElementById("message-input").value = "";
+});
+

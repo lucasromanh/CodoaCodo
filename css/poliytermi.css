@@ -1,0 +1,36 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos de la sección de Política de Privacidad */
+  .content {
+    background-color: #f2f2f2;
+    padding: 40px;
+  }
+  
+  .privacy-texto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-texto h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .privacy-texto h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-texto p {
+    margin-bottom: 20px;
+  }
+  
+  

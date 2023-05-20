@@ -375,15 +375,46 @@ html, body {
     grid-auto-columns: 100%;
     transform: var(--transform);
     transition:var(--transition);
-}
+    }
+
+.modal__table{
+    font-size: 2rem;
+    border-collapse: collapse;
+    }
+
+.modal__table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+ .modal_table td, #modal_table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+.modal__table tr:nth-child(even){background-color: #f2f2f2;}
+      
+.modal__table tr:hover {background-color: #ddd;}
+      
+.modal__table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #56CCF2;
+        color: white;
+    }
 
 .modal__title{
     font-size: 2.5rem;
+    text-align: center;
+    
 }
 
 .modal__paragraph{
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    place-items: center;
+   
 }
 
 .modal__img{
@@ -399,7 +430,7 @@ html, body {
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     transition: background-color .3s;
 }
@@ -409,12 +440,4 @@ html, body {
     background-color: #fff;
 }
 
-@media (max-width:800px) {
-    .modal__container{
-        padding: 2em 1.5em;
-    }
 
-    .modal__title{
-        font-size: 2rem;
-    }
-}
